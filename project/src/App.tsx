@@ -248,34 +248,33 @@ function App() {
         </div>
       </section>
 
-      {/* Quem Somos Section */}
-      <section id="quem-somos" className="section-gradient py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">Quem Somos</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gray-900/50 p-8 rounded-xl">
-              <p className="text-gray-400 text-lg">
-                [Espaço reservado para a história, missão e valores da OpenSky]
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {[1, 2, 3, 4].map((_, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="aspect-square bg-gray-900/50 rounded-xl flex items-center justify-center"
-                >
-                  <p className="text-gray-400">
-                    Projeto {index + 1}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+{/* Quem Somos Section */}
+<section
+  id="quem-somos"
+  className="relative py-24 px-6 bg-gradient-to-br from-black via-gray-900 to-black text-white"
+>
+  {/* Fundo decorativo vermelho desfocado */}
+  <div className="absolute inset-0">
+    <div className="absolute w-96 h-96 bg-red-600/20 blur-[120px] rounded-full top-20 left-10 animate-pulse" />
+    <div className="absolute w-72 h-72 bg-red-500/10 blur-[100px] rounded-full bottom-20 right-10" />
+  </div>
+
+  <div className="relative max-w-5xl mx-auto z-10 text-center">
+    <h2 className="text-5xl font-extrabold mb-8 tracking-tight text-white drop-shadow-md">
+      Quem Somos
+    </h2>
+
+    <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-10">
+      A <strong className="text-red-500">OpenSky</strong> é uma empresa de inovação digital focada em transformar o presente das empresas através da tecnologia. Desenvolvemos sistemas inteligentes, plataformas customizadas e soluções automatizadas que conectam estratégia, eficiência e inovação. Nosso compromisso é entregar resultados reais com soluções modernas e escaláveis.
+    </p>
+
+    <p className="text-md text-gray-400 leading-relaxed max-w-3xl mx-auto">
+      Fundada com a missão de empoderar negócios com ferramentas tecnológicas de ponta, unimos design, performance e automação para construir experiências únicas. Nossa equipe é movida por desafios, criatividade e impacto — entregando valor com excelência técnica, visão estratégica e suporte humano próximo.
+    </p>
+  </div>
+</section>
+
+
 
       {/* Service Modal */}
       {selectedService && (
