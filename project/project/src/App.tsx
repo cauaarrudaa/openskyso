@@ -137,7 +137,7 @@ function App() {
                 <a href="#contato" className="text-gray-300 hover:text-white transition-colors">Contato</a>
               </nav>
             </div>
-            <a
+            <a 
               href="https://wa.me/seu-numero"
               className="bg-red-700 hover:bg-red-800 px-4 py-2 rounded-lg text-sm font-medium transition-colors relative group"
             >
@@ -150,7 +150,7 @@ function App() {
 
       {/* Hero Section */}
       <section className="hero-gradient min-h-[80vh] flex items-center justify-center relative px-4 pt-16">
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center"
@@ -163,7 +163,7 @@ function App() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.2 }}
           />
-          <motion.h1
+          <motion.h1 
             className="text-4xl md:text-6xl font-bold mb-6 tracking-tight"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -171,7 +171,7 @@ function App() {
           >
             OpenSky
           </motion.h1>
-          <motion.p
+          <motion.p 
             className="text-xl mb-8 text-gray-300"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -179,9 +179,9 @@ function App() {
           >
             Soluções tecnológicas para o futuro
           </motion.p>
-          <motion.a
-            href="https://wa.me/seu-numero"
-            target="_blank"
+          <motion.a 
+            href="https://wa.me/seu-numero" 
+            target="_blank" 
             rel="noopener noreferrer"
             className="bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-full inline-flex items-center gap-2 transition-all"
             initial={{ y: 20, opacity: 0 }}
@@ -249,32 +249,33 @@ function App() {
       </section>
 
       {/* Quem Somos Section */}
-      <section
-        id="quem-somos"
-        className="relative py-24 px-6 bg-gradient-to-br from-black via-gray-900 to-black text-white"
-      >
-        {/* Fundo decorativo vermelho desfocado */}
-        <div className="absolute inset-0">
-          <div className="absolute w-96 h-96 bg-red-600/20 blur-[120px] rounded-full top-20 left-10 animate-pulse" />
-          <div className="absolute w-72 h-72 bg-red-500/10 blur-[100px] rounded-full bottom-20 right-10" />
-        </div>
-
-        <div className="relative max-w-5xl mx-auto z-10 text-center">
-          <h2 className="text-5xl font-extrabold mb-8 tracking-tight text-white drop-shadow-md">
-            Quem Somos
-          </h2>
-
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-10">
-            A <strong className="text-red-500">OpenSky</strong> é uma empresa de inovação digital focada em transformar o presente das empresas através da tecnologia. Desenvolvemos sistemas inteligentes, plataformas customizadas e soluções automatizadas que conectam estratégia, eficiência e inovação. Nosso compromisso é entregar resultados reais com soluções modernas e escaláveis.
-          </p>
-
-          <p className="text-md text-gray-400 leading-relaxed max-w-3xl mx-auto">
-            Fundada com a missão de empoderar negócios com ferramentas tecnológicas de ponta, unimos design, performance e automação para construir experiências únicas. Nossa equipe é movida por desafios, criatividade e impacto — entregando valor com excelência técnica, visão estratégica e suporte humano próximo.
-          </p>
+      <section id="quem-somos" className="section-gradient py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16">Quem Somos</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-gray-900/50 p-8 rounded-xl">
+              <p className="text-gray-400 text-lg">
+                [Espaço reservado para a história, missão e valores da OpenSky]
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[1, 2, 3, 4].map((_, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="aspect-square bg-gray-900/50 rounded-xl flex items-center justify-center"
+                >
+                  <p className="text-gray-400">
+                    Projeto {index + 1}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
-
-
 
       {/* Service Modal */}
       {selectedService && (
@@ -294,7 +295,7 @@ function App() {
               <X size={24} />
             </button>
             <div className="relative">
-              {services.find(s => s.title === selectedService)?.icon &&
+              {services.find(s => s.title === selectedService)?.icon && 
                 React.createElement(services.find(s => s.title === selectedService)!.icon, {
                   size: 48,
                   className: 'text-red-500 mb-4'
