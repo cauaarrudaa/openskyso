@@ -269,7 +269,7 @@ function App() {
           </p>
 
           <p className="text-md text-gray-400 leading-relaxed max-w-3xl mx-auto">
-            Fundada com a missão de empoderar negócios com ferramentas tecnológicas de ponta, unimos design, performance e automação para construir experiências únicas. Nossa equipe é movida por desafios, criatividade e impacto — entregando valor com excelência técnica, visão estratégica e suporte humano próximo.
+            Fundada com a missão de empoderar negócios com ferramentas tecnológicas de ponta, unimos design, performance e automação para construir experiências únicas. Nossa equipe é movida por desafios, criatividade e impacto entregando valor com excelência técnica, visão estratégica e suporte humano próximo.
           </p>
         </div>
       </section>
